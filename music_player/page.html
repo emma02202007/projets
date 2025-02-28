@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image\vinyle2.png">
+</head>
+<body>
+
+    <div id="imageContainer">
+        <img src="image/imts1.jpg" alt="Image 1">
+        <img src="image/imts2.jpg" alt="Image 2">
+        <img src="image/imts3.jpg" alt="Image 3">
+    </div>
+
+    <p id="heure"></p>
+    <script src="tscript.js"></script>
+
+    <div id="textLeft">
+        Meet <br/> me at <br/> Midnight<br/>
+    </div>
+
+    <div id="audioButtons">
+        <button class="audio-btn" onclick="playMusic(1)">
+            <img src="image/vinyle1.png" alt="Play Music 1">
+        </button>
+        <button class="audio-btn" onclick="playMusic(2)">
+            <img src="image/vinyle2.png" alt="Play Music 2">
+        </button>
+        <button class="audio-btn" onclick="playMusic(3)">
+            <img src="image/vinyle3.png" alt="Play Music 3">
+        </button>
+        <button class="audio-btn" onclick="playMusic(4)">
+            <img src="image/vinyle4.png" alt="Play Music 4">
+        </button>
+        <button class="audio-btn" onclick="playMusic(5)">
+            <img src="image/vinyle5.png" alt="Play Music 5">
+        </button>
+
+        <div id="volumeControl">
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <button class="stop-btn" onclick="stopMusic()">
+            <img src="image/stop.png" alt="Stop Music">
+        </button>
+    </div>
+
+    <!-- Audio Players -->
+    <audio id="musique1" src="image/lavender_haze.mp3" preload="auto"></audio>
+    <audio id="musique2" src="image/anti_hero.mp3" preload="auto"></audio>
+    <audio id="musique3" src="image/maroon.mp3" preload="auto"></audio>
+    <audio id="musique4" src="image/bejeweled.mp3" preload="auto"></audio>
+    <audio id="musique5" src="image/yoyok.mp3" preload="auto"></audio>
+
+    <script src="tscript3.js"></script>
+
+</body>
+</html>

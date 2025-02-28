@@ -1,0 +1,159 @@
+/* Fond de la page*/
+body {
+    background: linear-gradient(45deg, rgb(85, 81, 159), rgb(1, 2, 9));  /* Dégradé */
+    margin: 0;  /* Supprimer la marge par défaut */
+    padding: 0; /* Supprimer le padding par défaut */
+    min-height: 100vh; /* Assure que le fond couvre toute la hauteur de la page */
+}
+
+
+
+/* Container des images alignées verticalement ......................................................*/
+#imageContainer {
+    position: absolute;
+    right: 10px; /* Distance du bord droit */
+    top: 50%; /* Centre verticalement */
+    transform: translateY(-50%); /* Ajuste le centrage */
+    display: flex;
+    flex-direction: column; /* Affiche les images en colonne */
+    gap: 30px; /* Espace entre les images */
+}
+
+/* Style des images */
+#imageContainer img {
+    width: 150px; /* Largeur de l'image */
+    height: auto; /* Respecte le ratio d'origine */
+    margin-right: 100px; /* Décalage vers la gauche */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, content 0.3s ease; /* Animation */
+    border-radius: 8px; /* Bords arrondis */
+}
+
+/* Effet de hover sur les images */
+#imageContainer img:hover {
+    transform: scale(1.4); /* Agrandissement */
+}
+
+/* meet me at midnight........................................................*/
+#textLeft {
+    position: fixed; /* Fixe la position */
+    top: 50%;  /* Centrer verticalement */
+    left: 20px;   /* Légèrement à gauche */
+    transform: translateY(-50%);  /* Ajuste exactement le centrage vertical */
+    font-size: 100px;  /* Texte très grand */
+    color: #3c1164;  /* Couleur violette */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 20px;  /* Espace à gauche du texte */
+    white-space: nowrap;  /* Pour que le texte ne se casse pas */
+    overflow: hidden;  /* Cache le texte qui n'est pas encore écrit */
+    border-right: 4px solid #fff; /* Simule le curseur de frappe */
+    animation: typing 4s steps(20) 1s 1 normal both; /* Animation de frappe */
+    pointer-events: none;
+}
+
+/* Animation de frappe */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* l'heure .....................................................................................*/
+#heure {
+    font-family: 'Poppins', sans-serif;
+    text-align: right;  /* Aligne le texte à droite */
+    font-size: 30px;
+    position: fixed;  /* Position fixe */
+    top: 10px;  /* Un peu en haut */
+    left: 50px;  /* Un peu à droite */
+    border-radius: 10%;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.705);  /* Texte clair */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Ombre portée */
+}
+
+/* Section pour les boutons d'image alignés horizontalement */
+#audioButtons {
+    display: flex;
+    justify-content: flex-start; /* Aligner les boutons à gauche */
+    gap: 20px; /* Ajoute un léger espace entre les boutons */
+    position: absolute;
+    bottom: 20px; /* Place la section en bas de la page */
+    left: 20px; /* Un petit écart du bord gauche */
+}
+
+/* Style des boutons d'image */
+.audio-btn {
+    border: none;
+    background: none; /* Fond transparent */
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Style des images dans les boutons */
+.audio-btn img {
+    width: 100px; /* Taille des boutons */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation pour l'effet de survol */
+    border-radius: 8px; /* Bord arrondi des boutons */
+}
+
+/* Effet de hover sur les boutons */
+.audio-btn:hover img {
+    transform: rotate(30deg) scale(1.1); /* Rotation de 10 degrés et agrandissement */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre portée */
+}
+
+/* barre volume........................................................................... */
+#volumeControl {
+    color: #3c1164; /* Texte de la couleur */
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+#volumeSlider {
+    width: 300px;
+    height: 10px;
+    background: #3c1164; /* Couleur de la barre de volume */
+    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+/* Style du curseur sur la barre de volume */
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3c1164;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+/* Style du bouton stop ...............................................................*/
+.stop-btn {
+    background: transparent; /* Pas de fond pour le bouton */
+    border: none; /* Pas de bordure */
+    padding: 0; /* Pas de padding */
+}
+
+/* Style des images dans le bouton stop */
+.stop-btn img {
+    width: 70px; /* Taille du bouton */
+    height: auto; /* Respecte les proportions de l'image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, content 0.3s ease; /* Animation */
+}
+
+/* Effet de hover sur le bouton stop */
+.stop-btn:hover img {
+    transform: scale(0.8); /* Agrandissement à la mise au survol */
+}
